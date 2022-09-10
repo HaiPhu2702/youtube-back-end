@@ -10,7 +10,7 @@ import cookieParser from 'cookie-parser';
 import cors from 'cors'
 
 const app = express();
-app.use(cors())
+
 dotenv.config();
 
 const connect = async () => {
@@ -27,11 +27,7 @@ connect()
 
 app.use(cookieParser());
 app.use(express.json());
-app.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next()
-});
+app.use(cors())
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/videos", videoRoutes);
