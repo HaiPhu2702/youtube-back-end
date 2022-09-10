@@ -12,7 +12,7 @@ router.post('/', verifyToken, addComment);
 router.delete('/:id', verifyToken, deleteComment);
 
 //all comments of video
-router.get('/:videoId', verifyToken, getComment);
+router.get('/:videoId', getComment);
 
 
 
