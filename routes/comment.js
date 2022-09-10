@@ -9,7 +9,7 @@ import { verifyToken } from "../verifyToken.js";
 const router = express.Router();
 
 router.post('/', verifyToken, addComment);
-router.delete('/:id', verifyToken, deleteComment);
+router.delete('/:id', deleteComment);
 
 //all comments of video
 router.get('/:videoId', getComment);
