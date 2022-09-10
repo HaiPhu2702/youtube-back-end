@@ -1,7 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from "dotenv";
-import cookieParse from "cookie-parser";
 import userRoutes from "./routes/user.js"
 import videoRoutes from "./routes/video.js"
 import commentRoutes from "./routes/comment.js"
